@@ -62,3 +62,21 @@ other::GameEntry* other::ScoreBoard::remove(int i){
     board[length]=nullptr;
     return result;
 }
+
+void other::insertsort(int array[],int arraysize){
+    if(array == nullptr){
+        return;
+    }
+    if(arraysize == 0){
+        return;
+    }
+    for(int i=1;i<arraysize;i++){
+        int curvalue=array[i];
+        int ptr=i-1;
+        while(ptr>=0 && array[ptr]>curvalue){
+            array[ptr+1]=array[ptr];
+            ptr--;
+        }
+        array[ptr+1]=curvalue;
+    }
+}

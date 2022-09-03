@@ -1,6 +1,7 @@
 #include "test.hpp"
 
 void testother(){
+    std::cout<<">> --- >> testing game board"<<std::endl;
     other::GameEntry *e1=new other::GameEntry("test1",1);
     other::GameEntry *e2=new other::GameEntry("test2",2);
     other::GameEntry *e3=new other::GameEntry("test3",3);
@@ -13,4 +14,19 @@ void testother(){
     board.remove(1);
     std::cout<<board.tostring()<<std::endl;
     delete e1;delete e2;delete e3;
+    std::cout<<">> --- >> testing insert sort"<<std::endl;
+    int num[]={5,3,1,6,9,1};
+    int arraysize=sizeof(num)/sizeof(int);
+    std::cout<<"array size: "<<arraysize<<std::endl;
+    std::cout<<"before"<<std::endl;
+    for(size_t i=0;i<arraysize;i++){
+        std::cout<<num[i]<<" ";
+    }
+    std::cout<<std::endl;
+    other::insertsort(num,arraysize);
+    std::cout<<"after"<<std::endl;
+    for(size_t i=0;i<arraysize;i++){
+        std::cout<<num[i]<<" ";
+    }
+    std::cout<<std::endl;
 }

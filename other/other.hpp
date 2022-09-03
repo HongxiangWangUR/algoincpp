@@ -26,5 +26,7 @@ namespace other{
         std::string tostring();
         GameEntry* remove(int i);
     };
+
+    void insertsort(int data[],int arraysize);
 }
 #endif
