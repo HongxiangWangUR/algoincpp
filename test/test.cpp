@@ -29,4 +29,11 @@ void testother(){
         std::cout<<num[i]<<" ";
     }
     std::cout<<std::endl;
+    std::cout<<">> ----- >> testing CaesarCipher"<<std::endl;
+    std::string message="hello world";
+    other::CaesarCipher *cipher=new other::CaesarCipher(4);
+    std::string encoded=cipher->encrypt(message);
+    std::string decoded=cipher->decrypt(encoded);
+    std::cout<<"encoded string :"<<encoded<<std::endl;
+    std::cout<<"decoded string :"<<decoded<<std::endl;
 }

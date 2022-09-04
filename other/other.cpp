@@ -80,3 +80,31 @@ void other::insertsort(int array[],int arraysize){
         array[ptr+1]=curvalue;
     }
 }
+
+other::CaesarCipher::CaesarCipher(int rotate):rotate(rotate){
+    for(int i=0;i<26;i++){
+        encoder[i]='a'+(i+rotate)%26;
+        decoder[i]='a'+(i-rotate+26)%26;
+    }
+}
+
+std::string other::CaesarCipher::transform(std::string origin,char coder[]){
+    std::string result(origin.size(),' ');
+    for(int i=0;i<origin.size();i++){
+        if(isalpha(origin[i])){
+            int pos=origin[i]-'a';
+            result[i]=coder[pos];
+        }else{
+            result[i]=origin[i];
+        }
+    }
+    return result;
+}
+
+std::string other::CaesarCipher::encrypt(std::string message){
+    return transform(message,encoder);
+}
+
+std::string other::CaesarCipher::decrypt(std::string message){
+    return transform(message,decoder);
+}

@@ -28,5 +28,17 @@ namespace other{
     };
 
     void insertsort(int data[],int arraysize);
+
+    class CaesarCipher{
+        private:
+        char encoder[26];
+        char decoder[26];
+        int rotate;
+        std::string transform(std::string origin,char coder[]);
+        public:
+        CaesarCipher(int rotate);
+        std::string encrypt(std::string message);
+        std::string decrypt(std::string message);
+    };
 }
 #endif
