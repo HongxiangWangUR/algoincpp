@@ -37,3 +37,9 @@ void testother(){
     std::cout<<"encoded string :"<<encoded<<std::endl;
     std::cout<<"decoded string :"<<decoded<<std::endl;
 }
+
+void testlist(){
+    list::SinglyLinkedList<int> lis;
+    int *result=lis.first();
+    std::cout<<*result<<std::endl;
+}

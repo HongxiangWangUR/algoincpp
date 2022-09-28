@@ -1,5 +1,5 @@
 #include "test/test.hpp"
 int main(){
-    testother();
+    testlist();
     return 0;
 }
