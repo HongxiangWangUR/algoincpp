@@ -39,7 +39,13 @@ void testother(){
 }
 
 void testlist(){
-    list::SinglyLinkedList<int> lis;
-    int *result=lis.first();
-    std::cout<<*result<<std::endl;
+    list::SinglyLinkedList<int> linkedlist;
+    linkedlist.addFirst(new int(1));
+    linkedlist.addLast(new int(100));
+    linkedlist.addFirst(new int(200));
+    linkedlist.addLast(new int(300));
+    std::string result=linkedlist.to_string();
+    std::cout<<result<<std::endl;
+    linkedlist.removeFirst();
+    std::cout<<linkedlist.to_string()<<std::endl;
 }
